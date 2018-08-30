@@ -2,7 +2,7 @@
 
 Virtualisation in simple terms is running an operating system in another operating system. It can help you set up a new environment without impacting or modifying anything on your underlying main operating system by creating a completely new machine, with an independent operating system and only utilizing a small required amount of resources from the underlying system hardware.
 
-To implement this,we are going to need two applications, `Virtualbox` and `Vagrant`.
+To implement this, we are going to need two applications, `Virtualbox` and `Vagrant`.
 Make sure you have Virtualbox and Vagrant installed on your machine. If you are using a MacOS machine, you can install them with brew. If you don't have brew installed on your Mac, ~~there's no hope for you,~~ you can follow this [link](https://brew.sh/) to redeem yourself.
 
 #### To install them, run these commands:
@@ -25,21 +25,20 @@ I will be using these 2 (Vagrant and Virtualbox) applications together to setup 
 
 #### Steps
 
-1. First you create a `Vagrantfile` in the directory you would like to work from.
+1. Clone this repository
 
-   `touch Vagrantfile`
+2. Head over to the root folder from the terminal.
 
-2. Head over to Vagrant https://vagrantcloud.com/ and in the search field and type the name of the Operating system you want to setup. In this case, Windows server, and pick out one that meets your requirements and click on it.
-   On the new page, you will see a field labeled `Vagrantfile`. Copy the contents and paste them in the file we created earlier and save.
-3. Now head back to your terminal, ensuring that you are in the directory with your Vagrant file and and run;
+3. Run:
 
    `vagrant up`
 
-   This command will start to download an image has been configured as per it's details on the Vagrant cloud site to your local machine.
+   This command will start to download an image has been configured (in our case: https://app.vagrantup.com/jacqinthebox/boxes/windowsserver2016) as per it's details on the Vagrant cloud site to your local machine.
 
 4. Once it's done downloading, it will automatically be setup in virtualbox.
 
 #### Things to note
+You can choose your own server image by heading over to https://vagrantcloud.com/ and searching for the image that suits your needs. Once you have found the image you need, click on it and it will take you to a page where there will be details on how to use it. 
 
 When choosing a server to setup up with virtualisation on your local computer you need to take into consideration the minimum requirements necessary for the server to run in comparison with the hardware available on your computer so as not to overwhelm the computer and render it unable to perform tasks on either of the Operating systems optimumly.
 
